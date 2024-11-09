@@ -2,7 +2,7 @@
 #this script is to install java and jenkisn on linux
 #installation of java
 sudo apt update
-sudo apt install fontconfig openjdk-17-jre
+sudo apt install fontconfig openjdk-17-jre -y
 
 #install jenkins on ubuntu
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
