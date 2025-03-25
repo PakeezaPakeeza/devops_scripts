@@ -1,0 +1,27 @@
+#POLICY: Allows starting or stopping EC2 instances a user has tagged, programmatically and in the console (bhupinder rajput)
+#condition ye hai k ec2 mein Tag Owner use ho & ${aws:username} is replaced with the IAM user's username (jis user k liye ap policy bnana chahty ho)
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:StartInstances",
+                "ec2:StopInstances"
+            ],
+            "Resource": "arn:aws:ec2:*:*:instance/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/Owner": "${aws:username}"
+                }
+            }
+        },
+#ec2 mentioned resources ko nazar aye isliye ye condition lagai hai
+        {
+            "Effect": "Allow",
+            "Action": "ec2:DescribeInstances",
+            "Resource": "*"
+        }
+    ]
+}
