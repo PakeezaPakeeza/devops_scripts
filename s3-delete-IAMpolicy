@@ -1,0 +1,16 @@
+policy to deny s3 bucket delete
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Deny",
+            "Action": [
+                "s3:DeleteObject",
+                "s3:DeleteBucket"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
