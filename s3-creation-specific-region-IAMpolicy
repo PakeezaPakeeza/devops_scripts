@@ -1,0 +1,26 @@
+ALLOW SPECIFIC REGION TO CREATE S3 BUCKET
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:CreateBucket",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "s3:LocationConstraint": "ap-south-1"
+                }
+            }
+        },
+        {
+            "Effect": "Deny",
+            "Action": "s3:CreateBucket",
+            "Resource": "*",
+            "Condition": {
+                "StringNotEquals": {
+                    "s3:LocationConstraint": "ap-south-1"
+                }
+            }
+        }
+    ]
+}
