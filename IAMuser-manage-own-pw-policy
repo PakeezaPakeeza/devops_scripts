@@ -1,0 +1,21 @@
+#ALLOW SELECTED USERS TO MANAGE THEIR OWN PASSWORD
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "iam:GetAccountPasswordPolicy",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetUser",
+                "iam:ChangePassword",
+                "iam:GetLoginProfile"
+            ],
+            "Resource": "arn:aws:iam::*:user/${aws:username}"
+        }
+    ]
+}
