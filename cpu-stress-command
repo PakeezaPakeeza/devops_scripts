@@ -1,5 +1,4 @@
-#bupinder rajput filesssssssssssssssssssssssssss
-hhhhhhhhhhhhhh
+#bupinder rajput
 sudo yum install stress -y
   #run below command multiple times
 sudo stress --cpu 8 --timeout 800 &
