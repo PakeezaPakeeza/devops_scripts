@@ -1,0 +1,334 @@
+    1  id
+    2  who
+    3  pwd
+    4  exit
+    5  pwd
+    6  useradd -m pakeezar
+    7  id
+    8  cat /etc/groups
+    9  ls /etc
+   10  cat /etc/passwd
+   11  ls
+   12  exit
+   13  passwd pakeezar
+   14  su pakeezar
+   15  exit
+   16  useradd -m testuser
+   17  exit
+   18  cat /etc/passwd
+   19  id
+   20  userdel testuser
+   21  cat /etc/passwd
+   22  exit
+   23  groupadd testers
+   24  cat /etc/gpasswd
+   25  cat /etc
+   26  cat /etc/passwd
+   27  cat /etc/grpasswd
+   28  cat /etc/group
+   29  history
+   30  gpasswd pakeezar pakeeza
+   31  gpasswd -aG testers pakeezar pakeeza
+   32  gpasswd -a pakeezar pakeeza testers
+   33  gpasswd -M pakeezar pakeeza testers
+   34  gpasswd -aG pakeezar pakeeza testers
+   35  cat /etc/group
+   36  gpasswd -M pakeeza,pakeeza testers
+   37  cat /etc/group
+   38  gpasswd -h
+   39  gpasswd -d pakeeza testers
+   40  cat /etc/group
+   41  gpasswd -M pakeeza,pakeezar testers
+   42  cat /etc/group
+   43  cd
+   44  exit
+   45  history
+   46  yum install zip
+   47  exit
+   48  yum install net-tools
+   49  exit
+   50  yum install traceroute
+   51  exit
+   52  yum install telnet
+   53  exit
+   54  yum install wireless-tools
+   55  yum install wireless-tools -help
+   56  yum install -y wireless-tools
+   57  exit
+   58  yum install iw
+   59  exit
+   60  yum install whois
+   61  exit
+   62  yum install nmap
+   63  exit
+   64  localectl set-keymap de
+   65  localectl status
+   66  exit
+   67  lvm
+   68  find / -mtime 2 type -f
+   69  find / -mtime 2 -type f
+   70  find / -mtime -2 -type f
+   71  find / -mtime +10 -type f
+   72  find / -mtime +2 -type d
+   73  find / -ctime 2 -type d
+   74  find / -ctime 2 -type f
+   75  find / -ctime 1 -type f
+   76  find /root -ctime 1 -type f
+   77  exit
+   78  ls
+   79  touch testsoftfile
+   80  ln -s testsoftfile /dev/newtestsoftfile
+   81  ls /dev
+   82  ln testsoftfile /dev/newtestsoftfile
+   83  ln testsoftfile /dev/newtestsoftfile1
+   84  exit
+   85  ls
+   86  ls -al
+   87  ls -i
+   88  exit
+   89  pwd
+   90  mv file1.txt.gz /home/
+   91  ls
+   92  cd
+   93  ls
+   94  pwd
+   95  exit
+   96  ls
+   97  find / -type d -name file1.txt.gz
+   98  pwd
+   99  whoami
+  100  who
+  101  exit
+  102  ls
+  103  ls -al
+  104  ls -a
+  105  ls -ll
+  106  ls /dev
+  107  ls -a /dev
+  108  exit
+  109  mv file1.txt.gz /home/pakeeza
+  110  ls
+  111  cd 
+  112  ls
+  113  pwd
+  114  exit
+  115  pwd
+  116  find / -name testsoftfile
+  117  find / -name testsoftfile | wc -l
+  118  exit
+  119  find / -user pakeezar
+  120  find / -user root
+  121  find / -user pakeeza
+  122  find /home/pakeezar -user pakeeza
+  123  find /home/pakeezar -user pakeezar
+  124  find /home/pakeeza -user pakeeza
+  125  find /home/pakeeza -perm  744
+  126  find /home/pakeeza -perm  755
+  127  find /home/pakeeza/linux-for-devops/ -perm  755
+  128  find /home/pakeeza/linux-for-devops/ -perm  777
+  129  find /home/pakeeza/linux-for-devops/ -perm  711
+  130  find /home/pakeeza/ -perm  755
+  131  find /etc  -perm  711
+  132  find /home/pakeeza -mtime 2
+  133  find /home/pakeeza -mtime 7
+  134  find /home/pakeeza -mtime 1
+  135  find /home/pakeeza -mtime 10
+  136  find /home/pakeeza -mtime 6
+  137  find /home/pakeeza -mtime 3
+  138  find /home/pakeeza -mtime 1
+  139  find /home/pakeeza -mtime 2
+  140  find /home/pakeeza -ctime 1
+  141  find /home/pakeeza -ctime 2
+  142  find /home/pakeeza -ctime 5
+  143  find /home/pakeeza -ctime 7
+  144  find /home/pakeeza -mtime -2
+  145  find /home/pakeeza -mmin 120
+  146  find /home/pakeeza -mmin +120
+  147  find /home/pakeeza -mmin +60
+  148  find /home/pakeeza -mmin -15
+  149  find /home/pakeeza -mmin -55
+  150  find /home/pakeeza -mmin -120
+  151  find /home/pakeeza -mmin -170
+  152  find /home/pakeeza -mmin -type d -55
+  153  find /home/pakeeza -type f  -mmin -55
+  154  find /home/pakeeza -type f  -amin -55
+  155  find /home/pakeeza -type f  -atime -2
+  156  find /home/pakeeza -size -100M 
+  157  find /home/pakeeza -size -50M 
+  158  ls -al
+  159  find /home/pakeeza -size 6M 
+  160  find /home/pakeeza -size -20M 
+  161  find /home/pakeeza/linux-for-devops/ -size -20M 
+  162  find /var/log -type f -name "app.log" -mtime -2
+  163  find /var/log -type f -name "app.log" -mtime -5
+  164  exit
+  165  ls
+  166  touch file1
+  167  ll -d
+  168  ll
+  169  getfacl file1 
+  170  tail /etc/passwd
+  171  useradd user1
+  172  useradd user2
+  173  tail /etc/passwd
+  174  setfacl -m u:user1:wx file1 
+  175  ll
+  176  getfacl file1 
+  177  groupadd hr
+  178  tail /etc/groups
+  179  tail /etc/gpasswd
+  180  tail /etc/passwd
+  181  tail /etc/group
+  182  mkdir dir1
+  183  ll
+  184  cd dir1/
+  185  touch file3
+  186  cd ..
+  187  ls
+  188  setfacl -m d:u:user1:r dir1
+  189  ll
+  190  cd dir1
+  191  ll
+  192  touch file4
+  193  ll
+  194  getfacl file4
+  195  ls
+  196  rm dir*
+  197  rm -r *
+  198  ls
+  199  tail /etc/passwd
+  200  userdel -r user1
+  201  userdel -r user2
+  202  tail /etc/passwd
+  203  tail /etc/group
+  204  groupdel hr
+  205  tail /etc/group
+  206  useradd user1
+  207  useradd user2
+  208  useradd user3
+  209  useradd user4
+  210  groupadd grp1
+  211  groupadd grp2
+  212  groupadd grp3
+  213  tail /etc/group
+  214  groupadd -g 2000 grp4
+  215  tail /etc/group
+  216  groupmod -g 1009 grp4
+  217  tail /etc/group
+  218  groupmod -g 1010 grp4
+  219  tail /etc/group
+  220  groupmod -n newgrp grp4
+  221  tail /etc/group
+  222  gpasswd -h
+  223  gpasswd -aG user1 grp1
+  224  gpasswd -a user1 grp1
+  225  tail /etc/group
+  226  gpasswd -aG grp2,grp3 user1
+  227  gpasswd -M user1,user2,user3 grp3
+  228  tail /etc/group
+  229  usermod -aG grp2 user1
+  230  tail /etc/group
+  231  gpasswd -d user grp1
+  232  gpasswd -d user1 grp1
+  233  gpasswd -d user1 grp2
+  234  cat /etc/shadow
+  235  passwd user
+  236  passwd user1
+  237  cat /etc/shadow
+  238  usermod -L user1
+  239  cat /etc/shadow
+  240  usermod -h
+  241  pwd
+  242  su pakeeza
+  243  su - pakeeza
+  244  ls
+  245  wheel
+  246  cat /etc/group
+  247  gpasswd -d pakeeza wheel
+  248  gpasswd -a pakeeza wheel
+  249  cat /etc/group
+  250  exit
+  251  visudo
+  252  si - pakeeza
+  253  su - pakeeza
+  254  hostname
+  255  hostnamectl
+  256  cat /etc/hosts
+  257   cat /etc/resolve.conf
+  258   cat /etc/resolv.conf
+  259  cat seusers
+  260  ifconfig
+  261  ip addr show
+  262  route -n
+  263  ping
+  264  exit
+  265  pwd
+  266  exit
+  267  visudo
+  268  userdadd test2
+  269  useradd test2
+  270  exit
+  271  bash checking_forreadaccess.sh 
+  272  exit
+  273  bash checking_forreadaccess.sh 
+  274  ls -O /etc/passwd
+  275  ls -o /etc/passwd
+  276  bash checking_defaultgroupmembership.sh
+  277  cd
+  278  exit
+  279  cd .ssh
+  280  ls
+  281  ssh-keygen
+  282  ls
+  283  cat id_rsa.pub 
+  284  cd
+  285  exit
+  286  cd .ssh/
+  287  ls
+  288  cat known_hosts.old 
+  289  cat known_hosts
+  290  ls
+  291  cd
+  292  ls
+  293  git clone git@github.com:PakeezaPakeeza/devops_scripts.git
+  294  cd .ssh/
+  295  ls
+  296  cat id_rsa.pub 
+  297  exit
+  298  cd .ssh
+  299  ls
+  300  cat known_hosts 
+  301  pwd
+  302  ls
+  303  ssh-keygen
+  304  ls
+  305  ssh-keygen
+  306  ls
+  307  su - root
+  308  exit
+  309  ls
+  310  cat known_hosts 
+  311  cd
+  312  ls
+  313  pwd
+  314  exit
+  315  ls
+  316  git clone git@github.com:PakeezaPakeeza/devops_scripts.git
+  317  cd .ssh
+  318  ls
+  319  cat id_rsa.pub 
+  320  git clone git@github.com:PakeezaPakeeza/devops_scripts.git
+  321  ls
+  322  cd
+  323  ls
+  324  cd .ssh/
+  325  ls
+  326  rm - rf devops_scripts/
+  327  rm -rf devops_scripts/
+  328  ls
+  329  cd
+  330  git clone git@github.com:PakeezaPakeeza/devops_scripts.git
+  331  ls
+  332  cd devops_scripts/
+  333  git status
+  334  history > allcommands.txt
